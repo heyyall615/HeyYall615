@@ -7,12 +7,12 @@
     <style>
         body, html { 
             margin: 0; padding: 0; height: 100%; width: 100%; 
-            background-color: #1a0f0a; /* Matches the dark brick tone */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #1a0f0a; 
+            font-family: 'Segoe UI', sans-serif; 
             overflow: hidden;
         }
 
-        /* The FIX: 'contain' ensures the letters H and L are never cut off */
+        /* 'contain' keeps your H and L letters from being cut off */
         .bg-image { 
             position: fixed; top: 0; left: 0;
             width: 100%; height: 100%; 
@@ -20,48 +20,46 @@
             z-index: 1;
         }
 
+        /* Shifted to the BOTTOM LEFT */
         .action-box { 
-            position: fixed; bottom: 40px; left: 50%;
-            transform: translateX(-50%);
-            display: flex; flex-direction: column; 
-            gap: 12px; width: 90%; max-width: 380px; z-index: 10; 
+            position: fixed; 
+            bottom: 30px; 
+            left: 20px; /* Moved to the left */
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+            width: 85%; 
+            max-width: 320px; 
+            z-index: 10; 
         }
 
-        /* 615 Field Guide - Gold/Yellow Pop */
+        /* 615 Field Guide - Brighter Gold */
         .download-btn { 
-            background: #ffcc00; 
+            background: #FFD700; 
             color: #000; 
-            padding: 20px; 
-            border-radius: 12px; 
+            padding: 18px; 
+            border-radius: 10px; 
             text-decoration: none; 
             font-weight: 900; 
-            letter-spacing: 1px; 
             text-transform: uppercase; 
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
             transition: 0.3s; 
         }
 
-        .tip-links { display: flex; gap: 10px; }
+        .tip-links { display: flex; gap: 8px; }
 
-        /* Venmo Specific Blue */
         .venmo-btn { 
             flex: 1; background: #008CFF; color: white; 
-            padding: 14px; border-radius: 8px; text-decoration: none; 
-            font-size: 14px; text-align: center; font-weight: bold;
-            display: flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 12px; border-radius: 6px; text-decoration: none; 
+            font-size: 13px; text-align: center; font-weight: bold;
         }
 
-        /* PayPal Specific Blue */
         .paypal-btn { 
             flex: 1; background: #003087; color: white; 
-            padding: 14px; border-radius: 8px; text-decoration: none; 
-            font-size: 14px; text-align: center; font-weight: bold;
-            display: flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 12px; border-radius: 6px; text-decoration: none; 
+            font-size: 13px; text-align: center; font-weight: bold;
         }
-
-        /* Logo styling */
-        .logo-img { width: 18px; height: 18px; filter: brightness(0) invert(1); }
     </style>
 </head>
 <body>
@@ -70,14 +68,9 @@
 
     <div class="action-box">
         <a href="document.pdf" download="615_Field_Guide" class="download-btn">📂 615 Field Guide</a>
-        
         <div class="tip-links">
-            <a href="https://venmo.com/Timbo1hunnit" target="_blank" class="venmo-btn">
-                <span>Venmo</span>
-            </a>
-            <a href="https://paypal.me/timbo1hunnit" target="_blank" class="paypal-btn">
-                <span>PayPal</span>
-            </a>
+            <a href="https://venmo.com/Timbo1hunnit" target="_blank" class="venmo-btn">Venmo</a>
+            <a href="https://paypal.me/timbo1hunnit" target="_blank" class="paypal-btn">PayPal</a>
         </div>
     </div>
 
