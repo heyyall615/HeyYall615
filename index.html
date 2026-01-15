@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeyYall615</title>
+    <style>
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%; 
+            overflow: hidden; 
+            background-color: #000; 
+            font-family: sans-serif; 
+        }
+        /* This displays your bg.jpg as a full-screen background */
+        .bg-image { 
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            z-index: -1; 
+        }
+        .action-box { 
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+            align-items: flex-end; 
+            z-index: 10; 
+        }
+        .download-btn { 
+            background: rgba(255, 255, 255, 0.2); 
+            color: white; 
+            padding: 18px 30px; 
+            border: 1px solid rgba(255, 255, 255, 0.4); 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            letter-spacing: 1px; 
+            text-transform: uppercase; 
+            /* This gives it that frosted glass look */
+            backdrop-filter: blur(10px); 
+            transition: 0.3s; 
+        }
+        .download-btn:hover { 
+            background: white; 
+            color: black; 
+        }
+        .tip-links { 
+            display: flex; 
+            gap: 8px; 
+        }
+        .tip-btn { 
+            background: rgba(255, 255, 255, 0.1); 
+            color: white; 
+            padding: 10px 15px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-size: 12px; 
+            border: 1px solid rgba(255, 255, 255, 0.2); 
+            backdrop-filter: blur(5px); 
+            transition: 0.3s;
+        }
+        .tip-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <img src="bg.jpg" alt="Background" class="bg-image">
+
+    <div class="action-box">
+        <a href="document.pdf" download="615_Field_Guide" class="download-btn">615 Field Guide</a>
+        
+        <div class="tip-links">
+            <a href="https://venmo.com/Timbo1hunnit" target="_blank" class="tip-btn">Venmo</a>
+            <a href="https://paypal.me/timbo1hunnit" target="_blank" class="tip-btn">PayPal</a>
+        </div>
+    </div>
+</body>
+</html>
